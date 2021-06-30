@@ -138,6 +138,21 @@ Email: <input name="email" required="" size="75" type="email"/>
       ]
     });
   }
+  
+  
+     analytics.load("URfNVDEiaCwTC4VcMalTEaGIB8UZ8qgH", {
+          integrations: {
+            "Segment.io": {
+              deliveryStrategy: {
+                strategy: "batching",
+                config: {
+                  size: 10,
+                  timeout: 5000
+                }
+              }
+            }
+          }
+        });
 
 </script> 
 
